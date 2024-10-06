@@ -9,14 +9,8 @@ type Inputs = {
 };
 
 function App() {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-    getValues: getValues,
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => null;
+  const { register, handleSubmit, getValues: getValues } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   // console.log(watch("example")); // watch input value by passing the name of it
 
